@@ -134,7 +134,7 @@ class MultiLingualAlignedCorpusReader(object):
 if __name__ == "__main__":
 
     # TED Talks data directory
-    ted_data_path = "data/ted_data"
+    ted_data_path = "data/ted-data"
     src_lang, trg_lang = "en", "ro"
     output_data_path = "data/{}_{}".format(src_lang, trg_lang)
 
