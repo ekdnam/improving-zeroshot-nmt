@@ -29,7 +29,7 @@ BIN_DATA=$EXPDIR/data/bin-data
 # preprocess 
 if [ ! -d $PRE_DATA ]; then 
 mkdir -p $PRE_DATA 
-pushd -p $PRE_DATA
+# pushd -p $PRE_DATA
 
 for SRC in $SRCS; do
   for TGT in $TGTS; do
