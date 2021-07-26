@@ -164,4 +164,3 @@ if __name__ == "__main__":
                   split_type='dev', data_type='source')
     obj.save_file(output_data_path + "/dev.{}".format(trg_lang),
                   split_type='dev', data_type='target')
-{"mode":"full","isActive":false}
