@@ -13,7 +13,7 @@ BPESIZE=32000
 MOSES=$PWD/mosesdecoder/scripts
 NORM=$MOSES/tokenizer/normalize-punctuation.perl
 TOK=$MOSES/tokenizer/tokenizer.perl
-DEES=$MOSES//tokenizer/deescape-special-chars.perl
+DEES=$MOSES/tokenizer/deescape-special-chars.perl
 
 
 DATA=$PWD/data/ted-data 		
@@ -38,7 +38,8 @@ for SRC in $SRCS; do
       echo "PREPROCESSING $SRC <> $TGT DATA: $PWD"
 
       for SET in train dev test; do
-	RAW_DATA=$DATA/$SRC-$TGT/${SET}
+      RAW_DATA=$DATA/$TGT_$SRC/${SET}
+# 	RAW_DATA=$DATA/$SRC-$TGT/${SET}
 
 	# if adding lang_id, data should aggregate in bidirectional SRC<>TGT
 	if $ADD_LANGID; then 
