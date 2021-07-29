@@ -13,7 +13,7 @@ pushd $DATA
 
   # we use ./scripts/ted_talks_langs.txt to extract all langs-en pairs to ./data/ted_data
   # feeding the script lang ids. https://github.com/neulab/word-embeddings-for-nmt/blob/master/ted_reader.py
-  python $EXPDIR/scripts/ted_reader.py
+  # python $EXPDIR/scripts/ted_reader.py
 
-  rm -rf ./ted_data/*.tsv
+  # rm -rf ./ted_data/*.tsv
 popd
