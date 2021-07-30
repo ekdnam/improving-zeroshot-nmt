@@ -20,3 +20,5 @@ fi
 # subword-nmt 
 # git clone https://github.com/rsennrich/subword-nmt.git
 pip install subword-nmt
+
+pip install sacremoses
