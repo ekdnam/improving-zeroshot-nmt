@@ -43,8 +43,8 @@ for SRC in $SRCS; do
 
 	# if adding lang_id, data should aggregate in bidirectional SRC<>TGT
 	if $ADD_LANGID; then 
-          $NORM < ${RAW_DATA}.$SRC | $TOK -l $SRC -q | $DEES | awk -vtgt_tag="<2${TGT}>" '{ print tgt_tag" "$0 }' >> ${SET}.src	#$SRC 
-          $NORM < ${RAW_DATA}.$TGT | $TOK -l $TGT -q | $DEES | awk -vtgt_tag="<2${SRC}>" '{ print tgt_tag" "$0 }' >> ${SET}.src	#$SRC 
+          $NORM < ${RAW_DATA}.$SRC | $TOK -l $SRC -q | $DEES | awk -vtgt_tag="<2${TGT}>" '{ print tgt_tag" "$0 }' > ${SET}.src	#$SRC 
+          $NORM < ${RAW_DATA}.$TGT | $TOK -l $TGT -q | $DEES | awk -vtgt_tag="<2${SRC}>" '{ print tgt_tag" "$0 }' > ${SET}.src	#$SRC 
 
           $NORM < ${RAW_DATA}.$TGT | $TOK -l $TGT -q | $DEES >> ${SET}.tgt
           $NORM < ${RAW_DATA}.$SRC | $TOK -l $SRC -q | $DEES >> ${SET}.tgt	
