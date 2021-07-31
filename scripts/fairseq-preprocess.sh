@@ -26,9 +26,10 @@ BIN_DATA=$EXPDIR/data/bin-data
 # ===	===
 
 # binarize train/valid/test
+rm -rf $BIN_DATA
 if [ ! -d $BIN_DATA ]; then
   mkdir $BIN_DATA
-  python $FAIRSEQ/preprocess.py -s src -t tgt \
+  fairseq-preprocess -s src -t tgt \
 				--destdir $BIN_DATA \
 				--trainpref $BPE_DATA/train \
 				--validpref $BPE_DATA/dev \

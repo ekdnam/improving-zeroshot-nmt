@@ -16,7 +16,7 @@ TOK=$MOSES/tokenizer/tokenizer.perl
 DEES=$MOSES/tokenizer/deescape-special-chars.perl
 
 
-DATA=$PWD/data/ted-data 		
+DATA=$PWD/data/
 EXPDIR=$PWD/pretrain-model
 
 PRE_DATA=$EXPDIR/data/pre-data
@@ -91,7 +91,7 @@ fi
 # binarize train/valid/test
 if [ ! -d $BIN_DATA ]; then
   mkdir $BIN_DATA
-  python $FAIRSEQ/preprocess.py -s src -t tgt \
+  fairseq-preprocess -s src -t tgt \
 				--destdir $BIN_DATA \
 				--trainpref $BPE_DATA/train \
 				--validpref $BPE_DATA/dev \

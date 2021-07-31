@@ -17,7 +17,7 @@ MERGE_ZST_NONZST=true 			# merge zst pseudo-parallel with parallel data
 MAX_EPOCH=1				# num of epcoh to train in each round
 
 # generic settings
-DATA=$EXPDIR/data/ted-data
+DATA=$EXPDIR/data
 
 # pretrained model 
 PRE_DATA=$PRETRAINING/data/pre-data 	# as monolingual we use the X and Y side of X-P and Y-P parallel pairs 
