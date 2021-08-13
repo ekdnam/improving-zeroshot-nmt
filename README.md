@@ -19,6 +19,16 @@ this allows the system to learn from its own generated and
 increasingly better output. Approach shows to be effective in improving the two zero-shot directions of our multilingual model.*
 -->
 
+## Current procedure to run the code on Colab
+```
+git clone https://github.com/ekdnam/improving-zeroshot-nmt.git
+bash setup-env.sh
+bash scripts/get-ted-talks-data.sh
+python scripts/ted_reader.py
+python scripts/ted_reader_it.py
+bash scripts/preprocess.sh 'it ro'
+bash pretrain-baseline.sh
+```
 
 ## Scenario
 
